@@ -4,9 +4,10 @@ namespace LaravelEnso\SunriseSunset\Endpoints;
 
 use Illuminate\Support\Facades\Config;
 use LaravelEnso\Api\Contracts\Endpoint;
+use LaravelEnso\Api\Contracts\QueryParameters;
 use LaravelEnso\Frisbo\Enums\Methods;
 
-class SunriseSunset implements Endpoint
+class SunriseSunset implements Endpoint, QueryParameters
 {
     public function method(): string
     {
@@ -20,9 +21,14 @@ class SunriseSunset implements Endpoint
 
     public function body(): array
     {
-        return[
+        return [];
+    }
+
+    public function parameters(): array
+    {
+        return [
             'lat' => Config::get('enso.sunriseSunset.latitude'),
-            'lng' => Config::get('enso.sunriseSunset.latitude'),
+            'lng' => Config::get('enso.sunriseSunset.longitude'),
         ];
     }
 }

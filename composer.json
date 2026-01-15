@@ -1,5 +1,5 @@
 {
-    "name": "laravel-enso/frisbo",
+    "name": "laravel-enso/sunrise-sunset",
     "description": "Sunrise Sunset API for Laravel Enso",
     "keywords": [
         "laravel-enso",
@@ -30,13 +30,13 @@
     },
     "autoload": {
         "psr-4": {
-            "LaravelEnso\\Frisbo\\": "src/"
+            "LaravelEnso\\SunriseSunset\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "LaravelEnso\\Frisbo\\AppServiceProvider"
+                "LaravelEnso\\SunriseSunset\\AppServiceProvider"
             ],
             "aliases": []
         }

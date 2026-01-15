@@ -9,6 +9,10 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->load();
+
+        $this->publishes([
+            __DIR__.'/../config/sunriseSunset.php' => config_path('enso/sunriseSunset.php'),
+        ], ['sunrise-sunset-config', 'enso-config']);
     }
 
     private function load()
