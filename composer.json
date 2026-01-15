@@ -1,0 +1,44 @@
+{
+    "name": "laravel-enso/frisbo",
+    "description": "Sunrise Sunset API for Laravel Enso",
+    "keywords": [
+        "laravel-enso",
+        "sunrise-sunset",
+        "api"
+    ],
+    "homepage": "https://github.com/laravel-enso/sunrise-sunset",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adrian Ocneanu",
+            "email": "aocneanu@gmail.com",
+            "homepage": "https://laravel-enso.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Vlad Chiovianu",
+            "email": "vlad.chiovianu@earthlink.ro",
+            "homepage": "https://laravel-enso.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "laravel/framework": "^10.0|^11.0|^12.0",
+        "laravel-enso/api": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelEnso\\Frisbo\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LaravelEnso\\Frisbo\\AppServiceProvider"
+            ],
+            "aliases": []
+        }
+    }
+}
