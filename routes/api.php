@@ -7,5 +7,5 @@ Route::middleware(['api', 'auth', 'core'])
     ->prefix('api/sunriseSunset')
     ->as('sunriseSunset.')
     ->group(function () {
-        Route::get('', Index::class)->name('createIndex');
+        Route::get('/', Index::class)->name('index');
     });
