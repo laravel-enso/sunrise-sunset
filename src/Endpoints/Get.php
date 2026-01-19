@@ -2,13 +2,20 @@
 
 namespace LaravelEnso\SunriseSunset\Endpoints;
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Config;
 use LaravelEnso\Api\Contracts\Endpoint;
 use LaravelEnso\Api\Contracts\QueryParameters;
-use LaravelEnso\Frisbo\Enums\Methods;
+use LaravelEnso\Api\Enums\Methods;
 
-class SunriseSunset implements Endpoint, QueryParameters
+class Get implements Endpoint, QueryParameters
 {
+    public function __construct(
+        private ?Carbon $startDate = null,
+        private ?Carbon $endDate = null
+    ) {
+    }
+
     public function method(): string
     {
         return Methods::get;
@@ -27,6 +34,8 @@ class SunriseSunset implements Endpoint, QueryParameters
     public function parameters(): array
     {
         return [
+            'date_start' => $this->startDate->format('Y-m-d'),
+            'date_end' => $this->endDate->format('Y-m-d'),
             'lat' => Config::get('enso.sunriseSunset.latitude'),
             'lng' => Config::get('enso.sunriseSunset.longitude'),
         ];
