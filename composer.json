@@ -1,6 +1,6 @@
 {
     "name": "laravel-enso/sunrise-sunset",
-    "description": "Sunrise Sunset API for Laravel Enso",
+    "description": "Sunrise and sunset API integration for Laravel Enso",
     "keywords": [
         "laravel-enso",
         "sunrise-sunset",
