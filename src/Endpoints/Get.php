@@ -6,7 +6,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\Config;
 use LaravelEnso\Api\Contracts\Endpoint;
 use LaravelEnso\Api\Contracts\QueryParameters;
-use LaravelEnso\Api\Enums\Methods;
+use LaravelEnso\Api\Enums\Method;
 
 class Get implements Endpoint, QueryParameters
 {
@@ -16,9 +16,9 @@ class Get implements Endpoint, QueryParameters
     ) {
     }
 
-    public function method(): Methods
+    public function method(): Method
     {
-        return Methods::GET;
+        return Method::GET;
     }
 
     public function url(): string
