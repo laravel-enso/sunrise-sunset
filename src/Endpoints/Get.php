@@ -16,9 +16,9 @@ class Get implements Endpoint, QueryParameters
     ) {
     }
 
-    public function method(): string
+    public function method(): Methods
     {
-        return Methods::get;
+        return Methods::GET;
     }
 
     public function url(): string
